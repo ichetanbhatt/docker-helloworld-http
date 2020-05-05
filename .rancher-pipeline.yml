@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: hello-world
+      tag: hello-world-v1
       pushRemote: true
       registry: localhost:5000
   when:
