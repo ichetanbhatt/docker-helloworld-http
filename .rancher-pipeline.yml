@@ -1,4 +1,15 @@
-martin:
-    name: Martin D'vloper
-    job: Developer
-    skill: Elite
+stages:
+- name: repo-update
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: hello-world
+      pushRemote: true
+      registry: localhost:5000
+  when:
+    event:
+      include:
+      - push
+timeout: 60
+notification: {}
