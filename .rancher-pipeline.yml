@@ -6,9 +6,7 @@ stages:
       buildContext: .
       tag: hello-world-v1
       pushRemote: true
-      registry: localhost:5000
-    env:
-    PLUGIN_INSECURE: "true"
+      registry: 127.0.0.1:34059
   when:
     event:
       include:
