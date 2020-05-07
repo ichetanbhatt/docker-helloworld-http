@@ -1,14 +1,1 @@
-stages:
-- name: repo-update
-  steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: test-repo:latest
-      pushRemote: true
-      registry: index.docker.io
-  when:
-    event:
-      include:
-      - push
 notification: {}
