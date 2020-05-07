@@ -5,7 +5,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: hello-world-v1
-      registry: 127.0.0.1:34059
+      pushRemote: true
+      registry: registry.o4s.in:8081
   when:
     event:
       include:
