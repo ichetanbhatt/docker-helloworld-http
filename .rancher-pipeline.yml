@@ -22,7 +22,7 @@ stages:
   - runScriptConfig:
       image: busybox
       shellScript: |-
-        curl -u "token-nqf2w:75h64fq8f5tsnbxz5b8cxhzzp4jm8hg5f6n7jcqc2hbh5zhw7shdq6" \
+        curl -u "token-8xg66:qbk8qhxnq6ndd4sddj7qbqq26ppbt28jlmggvbhkh4vn56786pdklc" \
         -X POST \
         -H 'Accept: application/json' \
         -H 'Content-Type: application/json' \
