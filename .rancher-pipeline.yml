@@ -21,10 +21,8 @@ stages:
   steps:
   - runScriptConfig:
       image: python:latest
-      shellScript: |-
-        curl -u "token-8xg66:qbk8qhxnq6ndd4sddj7qbqq26ppbt28jlmggvbhkh4vn56786pdklc" \
-        -X POST \
-        -H 'Accept: application/json' \
-        -H 'Content-Type: application/json' \
-        'https://localhost:8443/v3/project/c-7h54t:p-97484/workloads/deployment:dev:hello-world?action=redeploy'
+      shellScript: 'curl -u "token-bhnsj:dxbkwxclj6dtw2kh4qcdffnxxjmgm9mf8dkfp97xsc7rdqszkxvjsc"
+        -X POST -H ''Accept: application/json'' -H ''Content-Type: application/json''
+        ''https://localhost:8443/v3/project/c-qdr9f:p-czkd6/workloads/deployment:o4s:hello-world?action=redeploy''
+        --insecure'
 notification: {}
