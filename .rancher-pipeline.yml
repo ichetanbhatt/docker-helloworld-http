@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ichetanbhatt/test-repo:v1.0
+      tag: ichetanbhatt/test-repo:latest
       pushRemote: true
       registry: index.docker.io
   when:
