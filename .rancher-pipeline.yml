@@ -1,11 +1,12 @@
 stages:
 - name: repo-update
   steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: |-
-        docker login -u admin -p admin@123 http://registry.o4s.in:8081/
-        echo done
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: test-repo:latest
+      pushRemote: true
+      registry: index.docker.io
   when:
     event:
       include:
