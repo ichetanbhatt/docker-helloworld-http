@@ -1,12 +1,22 @@
+# example
 stages:
-- name: clone
-  steps:
-  - sourceCodeConfig: {}
-  when:
-    branch: nonexistone
-- name: build
-  steps:
-  - runScriptConfig:
-      image: busybox
-      shellScript: ls
-timeout: 60
+  - name: Build something
+    # Conditions for stages
+    when:
+      branch: master
+      event: [ push ]
+    # Multiple steps run concurrently
+    steps:
+      - runScriptConfig:
+          image: busybox
+          shellScript: date -R
+  - name: Publish my image
+    steps:
+    - publishImageConfig:
+        dockerfilePath: ./Dockerfile
+        buildContext: .
+        tag: ichetanbhatt/test-repo:v1.0
+        # Optionally push to remote registry
+        pushRemote: true
+        registry: index.docker.io
+
