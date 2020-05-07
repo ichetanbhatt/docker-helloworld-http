@@ -17,4 +17,14 @@ stages:
       tag: ichetanbhatt/test-repo:latest
       pushRemote: true
       registry: index.docker.io
+- name: Redeploy
+  steps:
+  - runScriptConfig:
+      image: busybox
+      shellScript: |-
+        curl -u "token-nqf2w:75h64fq8f5tsnbxz5b8cxhzzp4jm8hg5f6n7jcqc2hbh5zhw7shdq6" \
+        -X POST \
+        -H 'Accept: application/json' \
+        -H 'Content-Type: application/json' \
+        'https://localhost:8443/v3/project/c-7h54t:p-97484/workloads/deployment:dev:hello-world?action=redeploy'
 notification: {}
