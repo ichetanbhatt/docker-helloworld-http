@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: hello-world-v1
       pushRemote: true
-      registry: registry.o4s.in:8081
+      registry: 192.168.1.21:5000
   when:
     event:
       include:
