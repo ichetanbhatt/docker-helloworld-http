@@ -1,1 +1,12 @@
-notification: {}
+stages:
+- name: clone
+  steps:
+  - sourceCodeConfig: {}
+  when:
+    branch: nonexistone
+- name: build
+  steps:
+  - runScriptConfig:
+      image: busybox
+      shellScript: ls
+timeout: 60
