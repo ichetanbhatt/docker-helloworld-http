@@ -7,6 +7,9 @@ stages:
       tag: hello-world-v1
       pushRemote: true
       registry: 192.168.1.21:5000
+    env:
+    PLUGIN_DEBUG: "true"
+    PLUGIN_INSECURE: "true"
   when:
     event:
       include:
