@@ -1,10 +1,11 @@
 stages:
 - name: repo-update
   steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: hello-world-v1
+  - runScriptConfig:
+      image: python:latest
+      shellScript: |-
+        docker login -u admin -p admin@123 http://registry.o4s.in:8081/
+        echo done
   when:
     event:
       include:
