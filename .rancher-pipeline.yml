@@ -5,7 +5,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: hello-world-v1
-
   when:
     event:
       include:
