@@ -20,7 +20,7 @@ stages:
 - name: Redeploy
   steps:
   - runScriptConfig:
-      image: busybox
+      image: python:latest
       shellScript: |-
         curl -u "token-8xg66:qbk8qhxnq6ndd4sddj7qbqq26ppbt28jlmggvbhkh4vn56786pdklc" \
         -X POST \
