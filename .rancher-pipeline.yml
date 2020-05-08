@@ -8,9 +8,7 @@ stages:
       pushRemote: true
       registry: index.docker.io
   when:
-    event:
-      include:
-      - push
+    event: {}
 - name: Redeploy
   steps:
   - runScriptConfig:
@@ -20,7 +18,5 @@ stages:
         ''https://192.168.1.21:8443/v3/project/c-qdr9f:p-czkd6/workloads/deployment:dev:hello-world?action=redeploy''
         --insecure'
   when:
-    event:
-      include:
-      - push
+    event: {}
 notification: {}
